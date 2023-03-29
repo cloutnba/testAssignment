@@ -2,10 +2,9 @@
 import './Footer.scss';
 
 import {Link} from "react-router-dom";
-import {useState} from "react";
 import Contacts from "../Contacts/Contacts";
 import Subscribe from "./Subscribe/Subscribe";
-import {brown} from "@mui/material/colors";
+
 
 
 const Footer = () => {

@@ -2,6 +2,7 @@ import {Routes, Route} from "react-router-dom";
 import './App.css';
 import Main from "./pages/Main/Main";
 import {createTheme, ThemeProvider} from "@mui/material";
+import InProgress from "./components/InProgress/InProgress";
 
 const theme = createTheme({
     components: {
@@ -31,6 +32,12 @@ function App() {
       <ThemeProvider theme={theme}>
           <Routes>
               <Route path="/" element={<Main/>}/>
+              <Route path="/home" element={<InProgress/>}/>
+              <Route path="/features" element={<InProgress/>}/>
+              <Route path="/blog" element={<InProgress/>}/>
+              <Route path="/shop" element={<InProgress/>}/>
+              <Route path="/about" element={<InProgress/>}/>
+              <Route path="/contact" element={<InProgress/>}/>
           </Routes>
       </ThemeProvider>
   );

@@ -5,9 +5,7 @@ import {ReactComponent as DiscordIcon} from "./icons/discord-icon-svgrepo-com.sv
 import {useFormik} from 'formik';
 import './ContactUs.scss';
 import {TextField} from "@mui/material";
-
 import {validationSchema} from "./validationSchema";
-import {useState} from "react";
 import Contacts from "../Contacts/Contacts";
 
 const ContactUs = () => {

@@ -5,7 +5,7 @@ import {ReactComponent as CartSvg} from "./icons/cart.svg";
 import {ReactComponent as UserWhiteSvg} from "./icons/user-white.svg";
 import {ReactComponent as CartWhiteSvg} from "./icons/cart-white.svg";
 import './Header.scss';
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {MenuContext} from "../../context";
 
 const Header = () => {
