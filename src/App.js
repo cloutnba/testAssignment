@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import {Routes, Route} from "react-router-dom";
 import './App.css';
+import Main from "./pages/Main/Main";
+import {createTheme, ThemeProvider} from "@mui/material";
+
+const theme = createTheme({
+    components: {
+        MuiTextField: {
+            styleOverrides: {
+                root: {
+                    '& .MuiInputLabel-root.Mui-focused': {
+                        color: 'black',
+                        fontWeight: 600,
+                    },
+                    '& .MuiInput-underline.Mui-focused': {
+                        '&:before': {
+                            borderBottomColor: 'rgba(0, 0, 0, 0.42)',
+                        },
+                        '&:after': {
+                            borderBottomColor: 'black',
+                        },
+                    },
+                },
+            },
+        },
+    },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ThemeProvider theme={theme}>
+          <Routes>
+              <Route path="/" element={<Main/>}/>
+          </Routes>
+      </ThemeProvider>
   );
 }
 

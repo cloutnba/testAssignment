@@ -1,0 +1,41 @@
+.subscribe{
+  &__input-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
+
+  }
+
+  &__input {
+    border: none;
+    padding: 1vw 2vw 1vw 1vw;
+    background: #1E1E1E;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    width: 90%;
+  }
+
+  &__button{
+    background: #000000;
+    border: none;
+    color: white;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 1vw;
+    width: 60%;
+  }
+
+  &__title{
+    margin-bottom: 1.5vw;
+  }
+
+  &__text{
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #717171;
+
+  }
+}

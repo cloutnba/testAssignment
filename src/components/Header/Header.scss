@@ -1,0 +1,171 @@
+.header {
+  background-color: #FBFBFB;
+  &--black{
+    background-color: black;
+    height: 100vh;
+  }
+
+
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media (max-width: 700px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr ;
+      row-gap: 8vh;
+
+    }
+  }
+
+  &__logo-wrapper {
+
+  }
+
+  &__logo {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1F1F1F;
+    text-decoration: none;
+
+    &.white{
+      color: white;
+    }
+    
+    @media (max-width: 350px) {
+      font-size: 18px;
+    }
+  }
+
+
+  &__nav-menu {
+    display: flex;
+    gap: 3vw;
+
+    @media (max-width: 700px) {
+      display: none;
+
+      &.open{
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        //position: relative;
+      }
+    }
+  }
+
+
+  &__nav-link {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+
+
+  }
+
+  &__actions-wrapper {
+    display: flex;
+    gap: 3vw;
+
+    @media (max-width: 700px) {
+      gap: 8vw;
+      position: absolute;
+      left: 43%;
+      top: 62%;
+    }
+  }
+
+  &__user-action {
+
+  }
+
+  &__menu-btn{
+    @media (min-width: 700px) {
+      display: none;
+    }
+
+    grid-column-start: 2;
+    grid-row-start: 1;
+    justify-self: end;
+
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+    &--burger{
+      width: 20px;
+      height: 2px;
+      background-color: black;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+
+      &.white{
+        &::before,
+        &::after{
+          background-color: white;
+        }
+      }
+
+      &::before,
+      &::after{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+
+      }
+
+      &::before{
+        transform: translateY(6px);
+      }
+      &::after{
+        transform: translateY(-6px);
+      }
+    }
+
+
+    //animations for burger menu
+    &.open &--burger{
+      transform: translateX(-20px);
+      background: transparent;
+    }
+    &.open &--burger::before{
+      transform: rotate(45deg) translate(15px, -15px);
+    }
+    &.open &--burger::after{
+      transform: rotate(-45deg) translate(15px, 15px);
+    }
+  }
+
+
+  //active class for NavLink
+  .active-nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+
+
+}
