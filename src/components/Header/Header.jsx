@@ -10,7 +10,7 @@ import {MenuContext} from "../../context";
 
 const Header = () => {
 
-    // I used context for hide everything except Header menu
+    // I used context for hide everything except Header menu, I think in this case better use Context, but for me isnt problem to do it via Redux
     const {isMenuOpen, toggleMenu} = useContext(MenuContext);
 
 
